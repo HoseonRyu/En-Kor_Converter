@@ -1,11 +1,16 @@
 from model.Hangul import HangulMe
 
-QUERY = "dkssudgktjldy"
-
 def main():
     converter = HangulMe()
-    string = converter.sequence(QUERY)
-    print(f"{string}")
+    flg = True
+    print('Type "fin" When you want to stop the program.')
+    while flg:
+        input_ = input("")
+        if input_ == "fin":
+            break
+        string = converter.sequence(input_)
+        print(f"{string}")
+    print("done!\n")
 
 if __name__ == "__main__":
     main()
